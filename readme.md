@@ -4,10 +4,10 @@
 <p>C# WebSocket Server is a easy and user-friendly Listen server for WebSocket clients written in Microsoft’s C# language. 
 The code itself is located in 3 class files - Server.cs, Client.cs and Helpers.cs. 
 A listen server is easily created by simply creating a new Server object. After the object is created, 
-you will have to bind the events that the server object has where you choose what to do with the data.</p>
+you will have to bind the events that the server object has where you choose what to do with the data.</p><br>
 
 <h3>Listen server example</h3>
-<p>Here's an example of a listen server</p>
+<p>Here's an example of a simple console application listen server:</p>
 
 ```c#
 // Console application entry point
@@ -24,16 +24,11 @@ static void Main(string[] args)
     };
 
     // Bind the event for when a message is received with a callback method
-    server.OnMessageReceived += MessageReceivedCallback;
+    server.OnMessageReceived += (object sender, OnMessageReceivedHandler e) =>
+    {
+        Console.WriteLine(“Message received: {0}”, e.GetMessage());
+    };
 
-}
-
-// Callback method for when a message was received
-static void MessageReceivedCallback(object sender, OnMessageReceivedHandler e)
-{
-    string message = e.GetMessage();
-    string guid = e.GetClient().GetGuid();
-    Console.WriteLine(“Message received: {0} - Sender Guid: {1}”, message, guid);
 }
 ```
 
