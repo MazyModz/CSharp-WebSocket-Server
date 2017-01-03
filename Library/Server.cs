@@ -1,4 +1,4 @@
-// Copyright © 2017 - MazyModz. Created by Dennis Andersson. All rights reserved.
+﻿// Copyright © 2017 - MazyModz. Created by Dennis Andersson. All rights reserved.
 
 using System;
 using System.Collections.Generic;
