@@ -12,7 +12,7 @@ you will have to bind the events that the server object has where you choose wha
     <li>Server  - The listen server object</li>
     <li>Client  - The object that represents a connected client</li>
     <li>Helpers - Helper methods and data types for the above objects</li>    
-</ul>
+</ul><br>
 
 <h3>Listen server example</h3>
 <p>Here's an example of a simple console application listen server using the class:</p>
@@ -39,5 +39,7 @@ static void Main(string[] args)
 
 }
 ```
+<br>
+<br>
 
 <a>Copyright © 2017 - MazyModz. Created by Dennis Andersson. All rights reserved.</a>
