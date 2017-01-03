@@ -6,7 +6,7 @@ The code itself is located in 3 class files - Server.cs, Client.cs and Helpers.c
 A listen server is easily created by simply creating a new Server object. After the object is created, 
 you will have to bind the events that the server object has where you choose what to do with the data.</p><br>
 
-<h3>Listen server example</h3>
+<h4>Listen server example</h4>
 <p>Here's an example of a simple console application listen server:</p>
 
 ```c#
