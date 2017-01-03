@@ -16,14 +16,14 @@ static void Main(string[] args)
     // Create a new websocket server
     Server server = new Server(new IPEndPoint(IPAdress.Parse(“127.0.0.1”), 80));
 
-    // Bind the event for when a client connected with lambda
+    // Bind the event for when a client connected
     server.OnClientConnected += (object sender, OnClientConnectedHandler e) =>
     {
         string clientGuid = e.GetClient().GetGuid();
         Console.WriteLine(“Client with guid {0} connected!”, clientGuid);
     };
 
-    // Bind the event for when a message is received with a callback method
+    // Bind the event for when a message is received
     server.OnMessageReceived += (object sender, OnMessageReceivedHandler e) =>
     {
         Console.WriteLine(“Message received: {0}”, e.GetMessage());
