@@ -1,0 +1,36 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>C# WebSocket Test</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://127.0.0.1:80");
+
+            socket.onopen = function(e) {
+                alert('Connected to server!');
+            }
+
+            socket.onclose = function(e) {
+                alert('Disconnected from server');
+            }
+
+            socket.onmessage = function(e) {
+                alert('Message from server:\n'+e.data);
+            }
+
+            socket.onerror = function(e) {
+                alert('An error has occured!\n'+e.message);
+            }
+
+            function SendToServer() {
+                var text = document.getElementById('tb-send').value;
+                socket.send(text);
+            }
+        </script>
+        <h1 style="width:100%;float:left;">C# WebSocket Server Example</h1>
+        <input id="tb-send" type="text" value="" />
+        <button onclick="SendToServer()">Send!</button>
+    </body>
+</html>
