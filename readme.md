@@ -48,7 +48,6 @@ static void Main(string[] args)
     {
         Console.WriteLine(“Message received: {0}”, e.GetMessage());
     };
-
 }
 ```
 <br>
