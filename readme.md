@@ -12,20 +12,20 @@ you will have to bind the events that the server object has where you choose wha
     <li>Server  - The listen server object</li>
     <li>Client  - The object that represents a connected client</li>
     <li>Helpers - Helper methods and data types for the above objects</li>    
-</ul><br>
-
+</ul>
+<br>
 <h3>Features</h3>
 <p>This system currently supports the following features:</p>
 <ul>
-<li><h4>Handle Client Connection</h4></li>
-<li><h4>Handle Client Disconnection</h4></li>
-<li><h4>Receive Client Message</h4></li>
-<li><h4>Send Message to Client</h4></li>
+<li>Handle Client Connection</li>
+<li>Handle Client Disconnection</li>
+<li>Receive Client Message</li>
+<li>Send Message to Client</li>
 <li>Encode WebSocket Data Frame</li>
 <li>Decode WebSocket Data Frame</li>
 <li>Preform WebSocket Handshake</li>
 </ul>
-
+<br>
 <h3>Listen server example</h3>
 <p>Here's an example of a simple console application listen server using the class:</p>
 
