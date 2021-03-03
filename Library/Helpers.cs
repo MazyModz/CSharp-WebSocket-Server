@@ -151,7 +151,7 @@ namespace WebSocketServer
             byte[] frame = new byte[10];
 
             int indexStartRawData = -1;
-            int length = bytesRaw.Length;
+            long length = bytesRaw.LongLength;
 
             frame[0] = (byte)(128 + (int)Opcode);
             if (length <= 125)
