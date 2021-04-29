@@ -151,7 +151,7 @@ namespace WebSocketServer
             byte[] frame = new byte[10];
 
             int indexStartRawData = -1;
-            int length = bytesRaw.Length;
+            long length = bytesRaw.LongLength;
 
             frame[0] = (byte)(128 + (int)Opcode);
             if (length <= 125)
@@ -221,7 +221,7 @@ namespace WebSocketServer
         /// <returns></returns>
         public static string GetHandshakeResponse(string Key)
         {
-            return string.Format("HTTP/1.1 101 Switching Protocols\nUpgrade: WebSocket\nConnection: Upgrade\nSec-WebSocket-Accept: {0}\r\n\r\n", Key);
+            return string.Format("HTTP/1.1 101 Switching Protocols\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: {0}\r\n\r\n", Key);
         }
 
         /// <summary>Gets the WebSocket handshake updgrade key from the http request</summary>
