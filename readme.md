@@ -23,7 +23,7 @@ you will have to bind the events that the server object has where you choose wha
 <li>Send Message to Client</li>
 <li>Encode WebSocket Data Frame</li>
 <li>Decode WebSocket Data Frame</li>
-<li>Preform WebSocket Handshake</li>
+<li>Perform WebSocket Handshake</li>
 </ul>
 <br>
 <h3>Listen server example</h3>
